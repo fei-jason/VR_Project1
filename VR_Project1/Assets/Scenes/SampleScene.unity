@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -377,6 +381,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &725865912 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 602233821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862998831
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +498,7 @@ GameObject:
   - component: {fileID: 1253840191}
   - component: {fileID: 1253840190}
   - component: {fileID: 1253840189}
+  - component: {fileID: 1253840192}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -556,6 +566,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1253840192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253840188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
+  markerActive: 1
 --- !u!1 &1598407273
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +778,7 @@ PrefabInstance:
     - target: {fileID: 6704357813613972019, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 725865912}
     - target: {fileID: 6704357815478923858, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
