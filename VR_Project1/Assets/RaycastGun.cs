@@ -31,7 +31,7 @@ public class RaycastGun : MonoBehaviour
          if (Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, gunRange))
          {
             laserLine.SetPosition(1, hit.point);
-            Destroy(hit.transform.gameObject);
+            //Destroy(hit.transform.gameObject);
          }
          else
          {
