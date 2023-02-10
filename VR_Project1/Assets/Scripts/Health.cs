@@ -42,4 +42,14 @@ public class Health : MonoBehaviour
     {
         currentHealth -= 25;
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+      if (collider.tag == "Bullet")
+        {
+            currentHealth -= 25;
+
+        }
+    }
+
 }
