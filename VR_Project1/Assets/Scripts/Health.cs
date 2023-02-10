@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     public GameObject healthBarUi;
     public Slider slider;
 
+
     // Start is called before the first frame update
     void Start() {
         currentHealth = maxHealth;
@@ -21,11 +22,11 @@ public class Health : MonoBehaviour
         slider.value = CalculateHealth();
         
         if (currentHealth < maxHealth) {
-            // healthBarUi.SetActive(true);
+            healthBarUi.SetActive(true);
         }
 
         if (currentHealth <= 0) {
-            // Destroy();
+            Destroy(gameObject);
         }
 
         if (currentHealth > maxHealth) {
@@ -35,5 +36,10 @@ public class Health : MonoBehaviour
 
     float CalculateHealth() {
         return (float)currentHealth / maxHealth;
+    }
+
+    private void OnTriggerEnter(Collider bullet)
+    {
+        currentHealth -= 25;
     }
 }
