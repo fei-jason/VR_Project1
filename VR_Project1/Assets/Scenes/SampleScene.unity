@@ -471,7 +471,7 @@ Transform:
   m_GameObject: {fileID: 662738827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 228.6738, y: 3.1859798, z: 199.93}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1232,6 +1232,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1995958072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6704005912265278685, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
+  m_PrefabInstance: {fileID: 6704357815303229661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1995958079
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995958072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.23449714
+  m_Center: {x: -0.0000000041913157, y: 0.008947016, z: 0.22431985}
 --- !u!1001 &2068190275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1416,6 +1434,22 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 111937132}
+    - target: {fileID: 6704357814024708008, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: d623cd35a78380d4eb0457c4e483abed, type: 3}
+    - target: {fileID: 6704357814024708008, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704357814817851933, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 3254420880137216083, guid: cb6f7d5c076b1304c87cc13989c91840, type: 3}
+    - target: {fileID: 6704357814817852000, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6704357814817852001, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
       propertyPath: player
       value: 
@@ -1448,5 +1482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken_Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6705298500188410411, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6704357814024708008, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0d5e5b202963014ba3241e728aed6ef, type: 3}

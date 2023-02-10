@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
         return (float)currentHealth / maxHealth;
     }
 
-    private void OnTriggerEnter(Collider bullet)
+    public void RemoveHealth()
     {
         currentHealth -= 25;
     }
