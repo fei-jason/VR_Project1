@@ -24,7 +24,7 @@ public class Collision : MonoBehaviour
         }
 
         if(bulletHit.gameObject.tag == "Enemy"){
-            bulletHit.gameObject.GetComponent<Health2>().takeDamage(10);
+            bulletHit.gameObject.GetComponent<Health2>().takeDamage(50);
         }
     }
 
