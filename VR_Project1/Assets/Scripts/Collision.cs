@@ -11,8 +11,6 @@ public class Collision : MonoBehaviour
     void Start()
     {
         
-        enemy = GameObject.Find("Chicken_Enemy");
-        
     }
 
     void Update()
@@ -20,9 +18,14 @@ public class Collision : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        Destroy(enemy);
+    private void OnCollisionEnter(UnityEngine.Collision bulletHit){
+        if(bulletHit.gameObject.tag == "Player"){
+            bulletHit.gameObject.GetComponent<PlayerHealth>().takeDamage(10);
+        }
+
+        if(bulletHit.gameObject.tag == "Enemy"){
+            bulletHit.gameObject.GetComponent<Health2>().takeDamage(10);
+        }
     }
 
 }
