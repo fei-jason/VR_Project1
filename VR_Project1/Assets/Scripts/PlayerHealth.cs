@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     
    public int maxHealth = 100;
    private int currHealth;
+   public GameObject redOverlay;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +34,13 @@ public class PlayerHealth : MonoBehaviour
         
         currHealth -= damage;
         
-        if (currHealth <= 0){
-            Destroy(gameObject);
+        if (currHealth <= 20)
+        {
+            redOverlay.SetActive(true);
+        }
+        else
+        {
+            redOverlay.SetActive(false);
         }
     }
 
