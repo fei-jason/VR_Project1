@@ -9,7 +9,7 @@ public class ChickenShoot : MonoBehaviour
     public float fireSpeed = 20;
 
     float timer;
-    int waitingTime = 1;
+    int waitingTime = 3;
 
     // Start is called before the first frame update
     void Start()
