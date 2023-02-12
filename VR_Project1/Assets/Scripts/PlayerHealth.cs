@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -59,13 +58,5 @@ public class PlayerHealth : MonoBehaviour
             currHealth = maxHealth;
         }
     }
-
-   /* private void OnCollisionEnter(Collision collision){
-
-        if(collision.gameObject.tag == "Bullet"){
-            collision.gameObject.GetComponent<PlayerHealth>().takeDamage(25);
-        
-        }
-    } */
 }
 
