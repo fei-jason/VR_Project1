@@ -7,6 +7,7 @@ public class chickenMove : MonoBehaviour
 {
 
     private Transform player;
+    private GameObject playerObj;
     private NavMeshAgent chicken;
     public LayerMask whatIsPlayer;
 
@@ -14,6 +15,7 @@ public class chickenMove : MonoBehaviour
     //Patroling
     public float range; //radius of sphere
     public Transform centrePoint; //centre of the area the agent wants to move around in
+    public float attackDistance;
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -22,6 +24,7 @@ public class chickenMove : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        playerObj = GameObject.Find("Player");
         chicken = GetComponent<NavMeshAgent>();
 
     }
@@ -29,8 +32,18 @@ public class chickenMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ChasePlayer();
+        
+        //calculate distance
+        var dist = Vector3.Distance(chicken.transform.position, playerObj.transform.position);
+
+        // stops the chicken moving once it reaches a certain position
+        if (dist < attackDistance)
+        {
+            AttackPlayer();
+        }
         //Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        /*playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         
         if(!playerInSightRange && !playerInAttackRange) {
@@ -39,7 +52,7 @@ public class chickenMove : MonoBehaviour
             ChasePlayer();
         } else if (playerInSightRange && playerInAttackRange) {
             AttackPlayer();
-        }
+        }*/
 
     }
 
@@ -75,7 +88,7 @@ public class chickenMove : MonoBehaviour
     private void ChasePlayer()
     {
         
-        chicken.SetDestination(player.position);
+        chicken.SetDestination(playerObj.transform.position);
     }
 
     private void AttackPlayer() {
