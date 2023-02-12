@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
     UnityEngine.Collision player;
 
     float timer;
-    int waitingTime = 2;
+    int waitingTime = 1;
 
     // Start is called before the first frame update
     void Start()

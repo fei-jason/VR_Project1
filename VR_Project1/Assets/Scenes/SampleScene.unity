@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -534,15 +534,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 266.75
+      value: 252.2
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.91
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 189.71
+      value: 190.59
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3016,9 +3016,33 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95943282407457612, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 95943282407457612, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
+      propertyPath: m_Size.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 95943282407457612, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
+      propertyPath: m_Size.z
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 95943282407457612, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
+      propertyPath: m_Center.y
+      value: 0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 8984969021971847699, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
       propertyPath: m_Name
       value: UpdatedChicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986279002126432974, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986279002126432974, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.292
       objectReference: {fileID: 0}
     - target: {fileID: 8987750504066522909, guid: 6dbeff5a775ba2647b04ec50ce6cd8bd, type: 3}
       propertyPath: m_RootOrder
