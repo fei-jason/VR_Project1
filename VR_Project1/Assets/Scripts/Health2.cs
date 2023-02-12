@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health2 : MonoBehaviour
 {
@@ -9,19 +10,19 @@ public class Health2 : MonoBehaviour
     private int currHealth;
 
     public GameObject healthBarUi;
-    //public Slider slider;
+    public Slider slider;
 
     // Start is called before the first frame update
     void Start()
     {
         currHealth = maxHealth;
-       // slider.value.CalculateHealth();
+        slider.value = (float)currHealth / maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //slider.value = CalculateHealth();
+        //slider.value = currHealth;
 
         if (currHealth < maxHealth) {
             healthBarUi.SetActive(true);
@@ -39,6 +40,7 @@ public class Health2 : MonoBehaviour
     public void takeDamage(int damage){
         
         currHealth -= damage;
+        slider.value = currHealth / maxHealth;
         
         if (currHealth <= 0){
             Destroy(gameObject);
