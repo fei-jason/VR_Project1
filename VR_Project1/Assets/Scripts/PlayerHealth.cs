@@ -51,6 +51,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void healDamage(int damage)
+    {
+        currHealth += damage;
+        if (currHealth > maxHealth)
+        {
+            currHealth = maxHealth;
+        }
+    }
+
    /* private void OnCollisionEnter(Collision collision){
 
         if(collision.gameObject.tag == "Bullet"){

@@ -12,23 +12,36 @@ public class PlayerEnergy : MonoBehaviour
     public GameObject energyUi;
     public Slider slider;
 
+    float timer;
+    int waitingTime = 3;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currEnergy = maxEnergy;
+        currEnergy = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         slider.value = (float)currEnergy / maxEnergy;
 
         if (currEnergy > maxEnergy)
         {
             currEnergy = maxEnergy;
         }
+
+        timer += Time.deltaTime;
+        if (timer > waitingTime)
+        {
+            currEnergy += 25;
+            timer = 0;
+        }
+
+
     }
 
 
